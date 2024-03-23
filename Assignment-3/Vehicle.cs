@@ -2,8 +2,13 @@
 
 namespace VehicleSpace
 {
+    public interface IDrawable
+    {
+        public void Draw();
+    }
+
     //abstract vehicle class
-    public abstract class Vehicle
+    public abstract class Vehicle : IDrawable
     {
         //fields
         protected String brand;
@@ -26,6 +31,11 @@ namespace VehicleSpace
             Console.WriteLine("Brand: " + brand);
             Console.WriteLine("Model: " + model);
         }
+
+        public void Draw()
+        {
+            Console.WriteLine("The vehicle is constructed");
+        }
     }
     
     //car class inherited from vehicle class
@@ -44,6 +54,11 @@ namespace VehicleSpace
         {
             Console.WriteLine("The Car is Stopped....");
         }
+
+        public void Draw()
+        {
+            Console.WriteLine("The car is manfactured");
+        }
     }
 
     //motorcycle class inherited from vehicle class
@@ -61,6 +76,10 @@ namespace VehicleSpace
         public override void stop()
         {
             Console.WriteLine("The Motorcycle is Stopped....");
+        }
+        public void Draw()
+        {
+            Console.WriteLine("The Mototrcycle is manfactured");
         }
     }
 }

@@ -2,8 +2,13 @@
 
 namespace ShapeSpace
 {
+    interface IDrawable
+    {
+        public void draw();
+    }
+
     //interface shape
-    interface IShape
+    interface IShape : IDrawable
     {
         //methods
         double getArea();
@@ -32,6 +37,11 @@ namespace ShapeSpace
         {
             return 2 * 3.14 * radius;
         }
+
+        public void draw()
+        {
+            Console.WriteLine("The Circle drawn with radius : " + radius);
+        }
     }
 
     //rectangle class inherited from interface shape
@@ -58,6 +68,11 @@ namespace ShapeSpace
         public double getPerimeter()
         {
             return 2 * (length+ breadth);
+        }
+
+        public void draw()
+        {
+            Console.WriteLine("The rectangle is drawn with length " + length + " and breadth " +  breadth);
         }
     }
 }

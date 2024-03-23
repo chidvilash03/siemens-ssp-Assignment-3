@@ -24,6 +24,7 @@ namespace ProgramSpace
                     Circle circle = new Circle(radius);
                     Console.WriteLine("The Area of the circle : " +  circle.getArea());
                     Console.WriteLine("The Perimeter of the circle : "+ circle.getPerimeter());
+                    circle.draw();
                     break;
                 case 2:
                     Console.WriteLine("Enter the length of the rectangle");
@@ -33,6 +34,7 @@ namespace ProgramSpace
                     Rectangle rectangle = new Rectangle(length,breadth);
                     Console.WriteLine("The Area of the Rectangle : " + rectangle.getArea());
                     Console.WriteLine("The Perimeter of the Rectangle : "+ rectangle.getPerimeter());
+                    rectangle.draw();
                     break;
                 default:
                     Console.WriteLine("Invalid Choice...");
@@ -54,6 +56,7 @@ namespace ProgramSpace
                     Console.WriteLine("Enter the model of the car");
                     string model = Console.ReadLine();
                     Car car = new Car(brand, model);
+                    car.Draw();
                     car.displayInfo();
                     car.start();
                     car.stop();
@@ -64,6 +67,7 @@ namespace ProgramSpace
                     Console.WriteLine("Enter the model of the Motorcycle");
                     string modelMotorcycle = Console.ReadLine();
                     Motorcycle motorcycle = new Motorcycle(brandMotorcycle, modelMotorcycle);
+                    motorcycle.Draw();
                     motorcycle.displayInfo();
                     motorcycle.start();
                     motorcycle.stop();
@@ -142,11 +146,11 @@ namespace ProgramSpace
 
         public static void Main()
         {
-            //Program exercise1 = new Program();
-            //exercise1.CreateCircleRectangleObjects();
+            //Program exercise1_3 = new Program();
+            //exercise1_3.CreateCircleRectangleObjects();
 
-            //Program exercise2 = new Program();
-            //exercise2.CreateCarAndMotorcycleObjects();
+            //Program exercise2_4 = new Program();
+            //exercise2_4.CreateCarAndMotorcycleObjects();
 
             //Program exercise6 = new Program();
             //exercise6.CreateSumAndAverageObject();
